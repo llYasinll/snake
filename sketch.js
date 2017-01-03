@@ -9,6 +9,7 @@ function setup() {
     rows = floor(height / scl);
     cols = floor(width / scl);
     snake = new Snake();
+    food = new Food();
     frameRate(10);
 }
 
@@ -17,6 +18,9 @@ function draw() {
     fill(255);
     snake.show();
     snake.update();
+    food.show();
+    snake.eat();
+    food.update();
 }
 
 function keyPressed() {

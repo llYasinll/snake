@@ -25,4 +25,11 @@ function Snake() {
         this.yspeed = y;
       }
     }
+
+    this.eat = function () {
+      var d = dist(this.x,this.y,food.pos.x,food.pos.y);
+      if(d<1){
+        food.done = true;
+      }
+    }
 }
