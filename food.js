@@ -10,7 +10,6 @@ function Food() {
     }
 
     this.update = function () {
-      console.log(this.done);
       if(this.done){
         this.pos = createVector(floor(random(cols)), floor(random(rows)));
         this.pos.mult(scl);
